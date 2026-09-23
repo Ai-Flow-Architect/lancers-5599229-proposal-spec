@@ -201,7 +201,7 @@
         <thead><tr><th>ご依頼の記載事項</th><th>回答</th></tr></thead>
         <tbody>
           <tr><td>進め方について</td><td>まず1,000件を試験として判断ログ付きでお返しします。</td></tr>
-          <tr><td>判定の物差しについて</td><td>③の5つの観点を、1件ごとに同じ順で当てます。</td></tr>
+          <tr><td>判定の物差しについて</td><td>③の観点を、1件ごとに同じ順で当てます。</td></tr>
           <tr><td>自動化の範囲について</td><td>候補を抽出し、判断は御社に残します。</td></tr>
           <tr><td>引き継ぎ資料について</td><td>④の4点をお渡しします。</td></tr>
           <tr><td>再委託について</td><td><b>ありません。</b>当方1名で担当します。</td></tr>
@@ -273,10 +273,69 @@
   <section id="ch3">
     <h2><span class="step">&#9314;</span>進め方</h2>
 
-    <h3>図1　1件のデータを、どの順で判定するか</h3>
+    <h3>図1　架空データ20件で、実際に動かした結果</h3>
     <div class="figure">
       <div class="svg-holder">
-<svg viewBox="0 0 1600 800" role="img" aria-label="1件のデータについて、見る列ごとに一致したときと一致しなかったときの扱いを並べた表">
+<svg viewBox="0 0 1600 998" role="img" aria-label="架空データ20件を実際に処理し、旧字や丁目表記のゆれを同一と判定し、生年月日が1日ずれる1組だけを保留にした結果の一覧">
+          <text x="60" y="56" fill="#D4AF37" font-size="30" font-weight="700">架空データ20件 → 11グループ／同一 9組／保留 1組</text>
+          <g class="node" data-name="旧字『朗→郎』を揃えて一致">
+          <rect class="box" x="60" y="96" width="1480" height="112" rx="10" fill="#1B2333" stroke="#5FB894" stroke-width="2"/>
+          <g transform="translate(84,128)"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></g>
+          <text x="150" y="142" fill="#F2F4F7" font-size="24">甲野　太郎 / コウノ タロウ</text>
+          <text x="150" y="180" fill="#C3CDD9" font-size="24">甲野 太朗 / コウノ タロウ</text>
+          <text x="900" y="162" fill="#5FB894" font-size="26" font-weight="700">同一</text>
+          <text x="1010" y="162" fill="#C3CDD9" font-size="23">旧字『朗→郎』を揃えて一致</text>
+          </g>
+          <g class="node" data-name="異体字『華→花』を揃えて一致">
+          <rect class="box" x="60" y="224" width="1480" height="112" rx="10" fill="#1B2333" stroke="#5FB894" stroke-width="2"/>
+          <g transform="translate(84,256)"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></g>
+          <text x="150" y="270" fill="#F2F4F7" font-size="24">乙野 花子 / オツノ ハナコ</text>
+          <text x="150" y="308" fill="#C3CDD9" font-size="24">乙野 華子 / オツノ ハナコ</text>
+          <text x="900" y="290" fill="#5FB894" font-size="26" font-weight="700">同一</text>
+          <text x="1010" y="290" fill="#C3CDD9" font-size="23">異体字『華→花』を揃えて一致</text>
+          </g>
+          <g class="node" data-name="丁目表記を揃えて一致">
+          <rect class="box" x="60" y="352" width="1480" height="112" rx="10" fill="#1B2333" stroke="#5FB894" stroke-width="2"/>
+          <g transform="translate(84,384)"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></g>
+          <text x="150" y="398" fill="#F2F4F7" font-size="24">庚野 六子 / 京都市中京区7-7</text>
+          <text x="150" y="436" fill="#C3CDD9" font-size="24">庚野 六子 / 京都市中京区7丁目7</text>
+          <text x="900" y="418" fill="#5FB894" font-size="26" font-weight="700">同一</text>
+          <text x="1010" y="418" fill="#C3CDD9" font-size="23">丁目表記を揃えて一致</text>
+          </g>
+          <g class="node" data-name="欠損は決め手にせず住所で判定">
+          <rect class="box" x="60" y="480" width="1480" height="112" rx="10" fill="#1B2333" stroke="#5FB894" stroke-width="2"/>
+          <g transform="translate(84,512)"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></g>
+          <text x="150" y="526" fill="#F2F4F7" font-size="24">丁野 三郎 / 生年月日なし</text>
+          <text x="150" y="564" fill="#C3CDD9" font-size="24">丁野 三郎 / 1980-01-20</text>
+          <text x="900" y="546" fill="#5FB894" font-size="26" font-weight="700">同一</text>
+          <text x="1010" y="546" fill="#C3CDD9" font-size="23">欠損は決め手にせず住所で判定</text>
+          </g>
+          <g class="node" data-name="生年月日が1日ずれ＝人にお見せする">
+          <rect class="box" x="60" y="608" width="1480" height="112" rx="10" fill="#1B2333" stroke="#E0724A" stroke-width="2"/>
+          <g transform="translate(84,640)"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg></g>
+          <text x="150" y="654" fill="#F2F4F7" font-size="24">丙野 次郎 / 1972-07-08</text>
+          <text x="150" y="692" fill="#C3CDD9" font-size="24">丙野 次郎 / 1972-07-09</text>
+          <text x="900" y="674" fill="#E0724A" font-size="26" font-weight="700">保留</text>
+          <text x="1010" y="674" fill="#C3CDD9" font-size="23">生年月日が1日ずれ＝人にお見せする</text>
+          </g>
+          <g class="node" data-name="住所が違っても他3つで一致">
+          <rect class="box" x="60" y="736" width="1480" height="112" rx="10" fill="#1B2333" stroke="#5FB894" stroke-width="2"/>
+          <g transform="translate(84,768)"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></g>
+          <text x="150" y="782" fill="#F2F4F7" font-size="24">甲野　太郎 / 千代田区1-1-1</text>
+          <text x="150" y="820" fill="#C3CDD9" font-size="24">甲野 太郎 / 千代田区一丁目1-1</text>
+          <text x="900" y="802" fill="#5FB894" font-size="26" font-weight="700">同一</text>
+          <text x="1010" y="802" fill="#C3CDD9" font-size="23">住所が違っても他3つで一致</text>
+          </g>
+          <text x="60" y="904" fill="#9AA7B4" font-size="24">※ 氏名はすべて架空（甲野・乙野など）です。御社のデータは一切使っていません。</text>
+          <text x="60" y="942" fill="#5FB894" font-size="24">※ この判定を動かすプログラムと判定ログは、ご依頼時にそのままお渡しします。</text>
+          </svg>
+      </div>
+    </div>
+
+    <h3>図2　1件のデータを、どの順で判定するか</h3>
+    <div class="figure">
+      <div class="svg-holder">
+<svg viewBox="0 0 1600 918" role="img" aria-label="1件のデータについて、見る列ごとに一致したときと一致しなかったときの扱いを並べた表">
           <text x="60" y="56" fill="#D4AF37" font-size="30" font-weight="700">見る列</text>
           <text x="640" y="56" fill="#5FB894" font-size="30" font-weight="700">一致したとき</text>
           <text x="1120" y="56" fill="#E0724A" font-size="30" font-weight="700">一致しないとき</text>
@@ -308,19 +367,26 @@
           <text x="640" y="506" fill="#C3CDD9" font-size="25">既存の列へ入れる</text>
           <text x="1120" y="506" fill="#C3CDD9" font-size="25">出典ページを付けて保留</text>
           </g>
-          <g class="node" data-name="複数ソースの食い違い">
+          <g class="node" data-name="生年月日">
           <rect class="box" x="60" y="562" width="1480" height="100" rx="10" fill="#1B2333" stroke="#4A586B" stroke-width="2"/>
-          <g transform="translate(84,588)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M7 21h10"/><path d="M3 7h3c2 0 4-1 6-2 2 1 4 2 6 2h3"/><path d="M6 7l-3 7c.9.7 1.9 1 3 1s2.1-.3 3-1z"/><path d="M18 7l-3 7c.9.7 1.9 1 3 1s2.1-.3 3-1z"/></svg></g>
-          <text x="150" y="624" fill="#F2F4F7" font-size="27" font-weight="700">複数ソースの食い違い</text>
-          <text x="640" y="624" fill="#C3CDD9" font-size="25">優先ソースの値を採る</text>
-          <text x="1120" y="624" fill="#C3CDD9" font-size="25">両方残して人にお見せする</text>
+          <g transform="translate(84,588)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></g>
+          <text x="150" y="624" fill="#F2F4F7" font-size="27" font-weight="700">生年月日</text>
+          <text x="640" y="624" fill="#C3CDD9" font-size="25">同一とみなす</text>
+          <text x="1120" y="624" fill="#C3CDD9" font-size="25">1日ずれは保留にして一覧へ</text>
           </g>
-          <text x="60" y="724" fill="#9AA7B4" font-size="24">※ 最初の1,000件でご一緒に固めます。</text>
+          <g class="node" data-name="複数ソースの食い違い">
+          <rect class="box" x="60" y="680" width="1480" height="100" rx="10" fill="#1B2333" stroke="#4A586B" stroke-width="2"/>
+          <g transform="translate(84,706)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M7 21h10"/><path d="M3 7h3c2 0 4-1 6-2 2 1 4 2 6 2h3"/><path d="M6 7l-3 7c.9.7 1.9 1 3 1s2.1-.3 3-1z"/><path d="M18 7l-3 7c.9.7 1.9 1 3 1s2.1-.3 3-1z"/></svg></g>
+          <text x="150" y="742" fill="#F2F4F7" font-size="27" font-weight="700">複数ソースの食い違い</text>
+          <text x="640" y="742" fill="#C3CDD9" font-size="25">優先ソースの値を採る</text>
+          <text x="1120" y="742" fill="#C3CDD9" font-size="25">両方残して人にお見せする</text>
+          </g>
+          <text x="60" y="842" fill="#9AA7B4" font-size="24">※ 最初の1,000件でご一緒に固めます。</text>
           </svg>
       </div>
     </div>
 
-    <h3>図2　10,000件を、どの順で進めるか</h3>
+    <h3>図3　10,000件を、どの順で進めるか</h3>
     <div class="figure">
       <div class="svg-holder">
 <svg viewBox="0 0 1600 400" role="img" aria-label="10000件のうち最初の1000件を試験作業として先にお返しし、ご判断のうえ残り9000件へ進むことを量で示した図">
@@ -382,8 +448,8 @@
     <div class="reading">
       <h3>次にお願いしたいこと</h3>
       <p>
-        <b>実データを20件ほどお送りください。</b><br>
-        判断基準シートの下書きを無償でお返しします（この1点だけで結構です）。
+        <b>上の見本を、御社の項目に合わせて作り直してお見せします。</b><br>
+        実データをお預かりする前に、項目名だけ教えていただければ無償でお出しします。
       </p>
     </div>
   </section>
